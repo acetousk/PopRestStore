@@ -23,14 +23,12 @@ along with this software (see the LICENSE.md file). If not, see
     <resource name="store" require-authentication="anonymous-view">
         <id name="productStoreId"><method type="get"><service name="popstore.StoreServices.get#StoreInfo"/></method></id>
         <resource name="search"><method type="get"><service name="popstore.SearchServices.search#All"/></method></resource>
-    </resource>
+    </resource>z
 
     <!-- Login and Register -->
 
     <resource name="login" require-authentication="anonymous-view">
         <method type="post"><service name="popstore.CustomerServices.login#Customer"/></method></resource>
-    <resource name="loginFB" require-authentication="anonymous-view">
-        <method type="post"><service name="popstore.CustomerServices.loginFB#Customer"/></method></resource>
     <resource name="logout" require-authentication="anonymous-view">
         <method type="get"><service name="popstore.CustomerServices.logout#Customer"/></method></resource>
     <resource name="register" require-authentication="anonymous-all">
@@ -47,7 +45,7 @@ along with this software (see the LICENSE.md file). If not, see
             <resource name="regions">
                 <method type="get"><service name="org.moqui.impl.BasicServices.get#GeoRegionsForDropDown"/></method></resource>
         </id>
-    </resource>  
+    </resource>
     <resource name="locale" require-authentication="anonymous-view">
         <method type="get"><service name="popstore.StoreServices.get#Locales"/></method>
     </resource>
